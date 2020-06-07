@@ -1,49 +1,74 @@
+body {
+  font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
+  color: white;
+}
+
 .game-board {
   display: grid;
   grid-template-columns: 100%;
   grid-template-areas:
     "title"
-    "category"
-    "puzzle"
     "feedback"
+    "puzzle"
+    "category"
     "controls"
     "scoreboard";
+  background-color: black;
 }
 
 .game-board__title {
   border: 1px solid red;
   grid-area: title;
+  font-family: "Slackey", cursive;
+  text-align: center;
 }
 .game-board__category {
   border: 1px solid yellow;
   grid-area: category;
+  text-align: center;
 }
 
 .game-board__category-text {
   background-color: white;
-  color:black;
+  color: black;
   border-radius: 2em;
   letter-spacing: 0.25em;
   padding: 0.25em;
-
+  width: 80%;
+  margin: 0 auto;
 }
 
 .game-board__puzzle {
   border: 1px solid blue;
   grid-area: puzzle;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-board__puzzle-word {
+  display: flex;
+  margin-right: 1em;
 }
 
 .game-board__puzzle-letter {
   background-color: white;
-  color:black;
-  padding: 0.1em;
-  line-height:1.75em;
-  border: 3px solid black;
+  color: black;
+  padding: 0.25em;
+  line-height: 1.75em;
+  border: 3px double black;
+}
+
+.game-board__puzzle-space {
+  background-color: rgba(50, 50, 50, 0.8);
 }
 
 .game-board__feedback {
   border: 1px solid green;
   grid-area: feedback;
+  padding: 1em;
+  text-align: center;
 }
 .game-board__controls {
   border: 1px solid orange;
